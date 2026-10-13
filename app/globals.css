@@ -2,8 +2,43 @@
 
 @theme inline {
   --font-mono: var(--font-arealMono);
+  --font-sans: var(--font-arealSans);
 }
 
-body {
-  font-weight: 500;
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(oklch(0.95 0 0), oklch(0.18 0 0));
+  --fg: light-dark(oklch(0.18 0 0), oklch(0.95 0 0));
+  --sd: light-dark(oklch(0.4 0 0), oklch(0.75 0 0));
+}
+
+::selection {
+  background: blue;
+  color: yellow;
+}
+
+.theme-light {
+  color-scheme: light;
+}
+
+.theme-dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
