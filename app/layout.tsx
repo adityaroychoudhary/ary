@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-16">
             <header className="flex flex-col gap-2">
-              <h1>Aditya Roychoudhary</h1>
+              <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
               <Navbar />
             </header>
             {children}

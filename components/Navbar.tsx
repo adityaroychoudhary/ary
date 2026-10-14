@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-2">
+    <nav className="flex gap-2 fade-in [--i:1]">
       {links.map(({ href, label }) => {
         const isActive =
           href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -22,9 +22,8 @@ export default function Navbar() {
           <Link
             key={href}
             href={href}
-            className={`transition-colors hover:text-(--sd) ${
-              isActive ? "underline underline-offset-[1.5px]" : ""
-            }`}
+            className={`transition-colors hover:text-(--sd) ${isActive ? "underline underline-offset-[1.5px]" : ""
+              }`}
           >
             {label}
           </Link>
