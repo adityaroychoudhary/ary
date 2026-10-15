@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -23,27 +25,30 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${arealMono.variable} ${arealSans.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-16">
-            <header className="flex flex-col gap-2">
-              <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
-              <Navbar />
-            </header>
-            {children}
-          </main>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html
+        lang="en"
+        className={`${arealMono.variable} ${arealSans.variable} h-full antialiased`}
+        suppressHydrationWarning
+      >
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 pb-16 pt-20">
+              <header className="flex flex-col gap-2 [view-transition-name:main-nav]">
+                <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
+                <Navbar />
+              </header>
+              {children}
+            </main>
+            <SmoothScroll />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
