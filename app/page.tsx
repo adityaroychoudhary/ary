@@ -1,5 +1,6 @@
 import Marquee from "@/components/Marquee"
-import { Project, projects } from "@/lib/data";
+import { projects } from "@/lib/data";
+import DitherBanner from "@/components/DitherBanner";
 
 export default function Home() {
   return (
@@ -35,28 +36,10 @@ export default function Home() {
             </a>{" "}
             by far. Those who have seen it know ball.
           </p>
-          {/* <div className="flex flex-row gap-4">
-          {links.map(({ label, href, external }) => (
-            <a
-              key={href}
-              href={href}
-              target={external ? "_blank" : undefined}
-              rel={external ? "noopener noreferrer" : undefined}
-              className="link-text"
-            >
-              {label}
-            </a>
-          ))}
-        </div> */}
         </section>
 
-        {/* <section className="fade-in flex flex-col gap-4 [--i:6]">
-        <h2>Links</h2>
-
-      </section> */}
-
         <section className="fade-in flex flex-col gap-4 [--i:7]">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 [--i:8]">
             <h1>Projects</h1>
             <p>Selected works — more on  <a
               href="https://github.com/adityaroychoudhary"
@@ -67,7 +50,7 @@ export default function Home() {
               github ↗
             </a></p>
           </div>
-          <ul className="space-y-5">
+          <ul className="space-y-5 [--i:9]">
             {projects.map((project) => (
               <li key={project.slug}>
                 <p>
@@ -76,14 +59,14 @@ export default function Home() {
                       href={project.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="link-text italic underline underline-offset-4"
+                      className="link-text italic underline underline-offset-4 [--i:10]"
                     >
                       {project.title}
                     </a>
                   ) : (
-                    <span className="italic">{project.title}</span>
+                    <span className="italic [--i:11]">{project.title}</span>
                   )}
-                  <span className="ml-3">{project.description}</span>
+                  <span className="ml-3 [--i:12]">{project.description}</span>
                 </p>
 
                 <div className="mt-1.5 text-sm text-(--sd)">
