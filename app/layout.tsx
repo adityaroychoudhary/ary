@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next"
+import { PageLoader } from "@/components/providers/PageLoader";
+import BotGradient from "@/components/ui/BotGradient";
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -33,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         suppressHydrationWarning
       >
         <body>
+          {/* <PageLoader /> */}
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -49,6 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <SmoothScroll />
           </ThemeProvider>
           <Analytics />
+          <BotGradient />
         </body>
       </html>
     </ViewTransitions>

@@ -85,7 +85,7 @@
 }
 
 .fade-in {
-  animation: fade-in 600ms ease-out both;
+  animation: fade-in 1000ms ease-out both;
   animation-delay: calc(var(--i, 0) * 60ms);
 }
 
@@ -157,4 +157,21 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+.loader-bg {
+  width: 100%;
+  min-height: 80px;
+  background-color: rgba(0, 0, 0, 0.838);
+  /* Dark semi-transparent background */
+  backdrop-filter: blur(12px);
+  /* Applies the frosted glass blur */
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari / older Webkit support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle top/bottom edge highlight */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
