@@ -43,3 +43,8 @@ export const projects: Project[] = [
     href: "https://github.com/adityaroychoudhary",
   },
 ];
+
+export const links = {
+  github: "https://github.com/adityaroychoudhary",
+  lotgh: "https://grokipedia.com/page/Legend_of_the_Galactic_Heroes",
+};

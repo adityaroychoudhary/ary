@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-16 max-w-full md:max-w-3xl">
-        <About />
-        <Projects />
+        <About order={1} />
+        <Projects order={2} />
       </div>
     </>
   );
