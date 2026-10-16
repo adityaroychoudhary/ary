@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next"
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </main>
             <SmoothScroll />
           </ThemeProvider>
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
