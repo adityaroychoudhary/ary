@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
@@ -5,9 +6,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { Analytics } from "@vercel/analytics/next"
 import { PageLoader } from "@/components/providers/PageLoader";
-import BotGradient from "@/components/ui/BotGradient";
+import { TopGradient, BotGradient } from "@/components/ui/PageMask";
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -51,8 +51,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </main>
             <SmoothScroll />
           </ThemeProvider>
-          <Analytics />
+          <TopGradient />
           <BotGradient />
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
