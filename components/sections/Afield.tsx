@@ -4,7 +4,7 @@ import { contact } from "@/lib/data";
 
 const display = (href: string) => href.replace(/^https?:\/\//, "");
 
-export default function Afield() {
+export default function Afield({ order }: { order: number }) {
   return (
     <section className="flex flex-col gap-4">
       <h2 className="text-xl font-bold">Reach out</h2>
