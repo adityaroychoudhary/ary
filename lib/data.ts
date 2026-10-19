@@ -52,9 +52,9 @@ export const links = {
 export const contact = {
   email: "ar006985@gmail.com",
   socials: [
-    { label: "X (Twitter) ↗", href: "https://x.com/adityaroych" },
-    { label: "Instagram ↗", href: "https://instagram.com/ssigmaadi" },
-    { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/aditya-roychoudhary-075930283/" },
-    { label: "Mastodon ↗", href: "https://mastodon.social/@adityaroychoudhary" },
+    { label: "X", href: "https://x.com/adityaroych" },
+    { label: "Instagram", href: "https://instagram.com/ssigmaadi" },
+    // { label: "LinkedIn", href: "https://linkedin.com/in/aditya-roychoudhary-075930283/" },
+    { label: "Mastodon", href: "https://mastodon.social/@adityaroychoudhary" },
   ],
 };
