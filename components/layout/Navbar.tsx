@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
@@ -14,19 +15,23 @@ export default function Navbar() {
 
   return (
     <nav className="flex gap-2 fade-in [--i:1]">
-      {links.map(({ href, label }) => {
+      {links.map(({ href, label }, index) => {
         const isActive =
           href === "/" ? pathname === "/" : pathname.startsWith(href);
 
         return (
-          <Link
-            key={href}
-            href={href}
-            className={`transition-colors hover:text-(--sd) ${isActive ? "underline underline-offset-[1.5px]" : ""
-              }`}
-          >
-            {label}
-          </Link>
+          <Fragment key={href}>
+            <Link
+              href={href}
+              className={`transition-colors hover:text-(--sd) ${isActive ? "underline underline-offset-[1.5px]" : ""
+                }`}
+            >
+              {label}
+            </Link>
+            {index < links.length - 1 && (
+              <span aria-hidden="true">·</span>
+            )}
+          </Fragment>
         );
       })}
     </nav>
