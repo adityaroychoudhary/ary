@@ -1,3 +1,3 @@
 export default function Personal() {
-  return <p>Personal page.</p>;
+  return <p>Under construction ;0</p>;
 }

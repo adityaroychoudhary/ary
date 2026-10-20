@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-2 fade-in [--i:1]">
+    <nav className="flex gap-1 fade-in [--i:1]">
       {links.map(({ href, label }, index) => {
         const isActive =
           href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -29,7 +29,7 @@ export default function Navbar() {
               {label}
             </Link>
             {index < links.length - 1 && (
-              <span aria-hidden="true">·</span>
+              <span aria-hidden="true">{"/"}</span>
             )}
           </Fragment>
         );

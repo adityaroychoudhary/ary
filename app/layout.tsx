@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { PageLoader } from "@/components/providers/PageLoader";
 import { TopGradient, BotGradient } from "@/components/ui/PageMask";
+import Footer from "@/components/layout/Footer";
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -42,13 +43,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             enableSystem
             disableTransitionOnChange
           >
-            <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-20">
+            <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-20 min-h-screen">
               <header className="flex flex-col gap-2 [view-transition-name:main-nav]">
                 <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
                 <Navbar />
               </header>
               {children}
             </main>
+            <div className="max-w-5xl mx-auto pb-20 px-4">
+              <Footer />
+            </div>
             <SmoothScroll />
           </ThemeProvider>
           <TopGradient />
