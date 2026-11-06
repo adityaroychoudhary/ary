@@ -55,7 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
             <SmoothScroll />
           </ThemeProvider>
-          <TopGradient />
+          {/* <TopGradient /> */}
           <BotGradient />
           <Analytics />
         </body>

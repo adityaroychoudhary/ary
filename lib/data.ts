@@ -9,27 +9,27 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "synapse",
-    title: ":Synapse//",
+    title: "Synapse",
     description:
       "Minimalist publishing platform and personal knowledge garden.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    href: "https://github.com/adityaroychoudhary",
+    href: "https://synapse-personalblog.vercel.app",
   },
   {
-    slug: "hypr-dots",
-    title: "Hyprland Rice & Dotfiles",
+    slug: "airchat",
+    title: "AirChat",
     description:
-      "Monochromatic Wayland environment with custom Waybar & Zsh scripts.",
-    tech: ["Hyprland", "CSS", "Shell"],
-    href: "https://github.com/adityaroychoudhary",
+      "A fast and performant chat app with securing messaging and live reactions.",
+    tech: ["React", "Tailwind CSS", "Socket.io", "Express JS", "Mongo DB"],
+    href: "https://airchat-ctlh.onrender.com",
   },
   {
-    slug: "447-studio",
-    title: "447 Studio",
+    slug: "monograph",
+    title: "Monograph",
     description:
-      "Brand showcase and interactive web presence for a design studio.",
-    tech: ["React", "Next.js", "Framer Motion"],
-    href: "https://github.com/adityaroychoudhary",
+      "A local-first screen time tracker.",
+    tech: ["Rust", "React", "Tauri", "Cross-platform"],
+    href: "https://github.com/adityaroychoudhary/monograph",
   },
   {
     slug: "wikifetch",
@@ -40,12 +40,12 @@ export const projects: Project[] = [
     href: "https://github.com/adityaroychoudhary",
   },
   {
-    slug: "pulse-analytics",
-    title: "Pulse Telemetry",
+    slug: "bffp",
+    title: "Backend From First Principles",
     description:
-      "Real-time match statistics and team performance aggregation pipeline.",
-    tech: ["MongoDB", "Next.js", "shadcn/ui"],
-    href: "https://github.com/adityaroychoudhary",
+      "A practical, framework-agnostic roadmap for learning backend engineering from first principles.",
+    tech: ["Backend", "Roadmap", "Guide"],
+    href: "https://github.com/adityaroychoudhary/backend-from-first-principles",
   },
 ];
 
