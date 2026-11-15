@@ -9,6 +9,7 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { PageLoader } from "@/components/providers/PageLoader";
 import { TopGradient, BotGradient } from "@/components/ui/PageMask";
 import Footer from "@/components/layout/Footer";
+import { GlimmProvider } from 'glimm/next'
 
 const arealMono = localFont({
   src: "./fonts/ABCArealMonoVariable.woff2",
@@ -43,19 +44,33 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             enableSystem
             disableTransitionOnChange
           >
-            <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-20 min-h-screen">
-              <header className="flex flex-col gap-2 [view-transition-name:main-nav]">
-                <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
-                <Navbar />
-              </header>
-              {children}
-            </main>
-            <div className="max-w-5xl mx-auto pb-20 px-4">
-              <Footer />
-            </div>
-            <SmoothScroll />
+            <GlimmProvider
+              palette="spectrum"
+              direction="rtl"
+              easing="back"
+              sweepMs={800}
+              outroMs={50}
+              midpoint={0.5}
+              bandTight={25}
+              peakAlpha={1}
+              rippleAmount={0.6}
+              waveSpeed={1.4}
+              // brightness={0.85}
+            >
+              <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-20 min-h-screen">
+                <header className="flex flex-col gap-2 [view-transition-name:main-nav]">
+                  <h1 className="fade-in [--i:0]">Aditya Roychoudhary</h1>
+                  <Navbar />
+                </header>
+                {children}
+              </main>
+              <div className="max-w-5xl mx-auto pb-20 px-4">
+                <Footer />
+              </div>
+              <SmoothScroll />
+            </GlimmProvider>
           </ThemeProvider>
-          {/* <TopGradient /> */}
+           <TopGradient />
           <BotGradient />
           <Analytics />
         </body>

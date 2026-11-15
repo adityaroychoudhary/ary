@@ -7,7 +7,7 @@
 
 :root {
   color-scheme: light dark;
-  --bg: light-dark(oklch(0.95 0 0), oklch(0.18 0 0));
+  --bg: light-dark(oklch(0.95 0 0), oklch(16.9% 0.002 286.2));
   --fg: light-dark(oklch(0.18 0 0), oklch(0.95 0 0));
   --sd: light-dark(oklch(0.4 0 0), oklch(0.75 0 0));
 }

@@ -3,6 +3,7 @@
 import { Fragment } from "react";
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
+import { TransitionLink } from "glimm/next";
 
 const links = [
   { href: "/", label: "Main" },
@@ -21,13 +22,13 @@ export default function Navbar() {
 
         return (
           <Fragment key={href}>
-            <Link
+            <TransitionLink
               href={href}
               className={`transition-colors hover:text-(--sd) ${isActive ? "underline underline-offset-[1.5px]" : ""
                 }`}
             >
               {label}
-            </Link>
+            </TransitionLink>
             {index < links.length - 1 && (
               <span aria-hidden="true">{"/"}</span>
             )}
