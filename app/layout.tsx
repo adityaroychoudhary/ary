@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ViewTransitions } from "next-view-transitions";
@@ -6,10 +6,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { PageLoader } from "@/components/providers/PageLoader";
 import { TopGradient, BotGradient } from "@/components/ui/PageMask";
 import Footer from "@/components/layout/Footer";
-import { GlimmProvider } from 'glimm/next'
 import { ResponsiveGlimm } from "@/components/providers/ResponsiveGlimm";
 
 const arealMono = localFont({
@@ -59,7 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <SmoothScroll />
             </ResponsiveGlimm>
           </ThemeProvider>
-           <TopGradient />
+          <TopGradient />
           <BotGradient />
           <Analytics />
         </body>

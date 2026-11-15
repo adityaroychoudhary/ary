@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment } from "react";
-import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { TransitionLink } from "glimm/next";
 
@@ -24,14 +23,13 @@ export default function Navbar() {
           <Fragment key={href}>
             <TransitionLink
               href={href}
-              className={`transition-colors hover:text-(--sd) ${isActive ? "underline underline-offset-[1.5px]" : ""
-                }`}
+              className={`transition-colors hover:text-(--sd) ${
+                isActive ? "underline underline-offset-[1.5px]" : ""
+              }`}
             >
               {label}
             </TransitionLink>
-            {index < links.length - 1 && (
-              <span aria-hidden="true">{"/"}</span>
-            )}
+            {index < links.length - 1 && <span aria-hidden="true">{"/"}</span>}
           </Fragment>
         );
       })}

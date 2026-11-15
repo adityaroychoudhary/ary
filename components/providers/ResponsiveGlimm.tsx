@@ -11,7 +11,7 @@ function useMediaQuery(query: string) {
       return () => mql.removeEventListener("change", cb);
     },
     () => window.matchMedia(query).matches,
-    () => false // server snapshot: assume desktop
+    () => false,
   );
 }
 
@@ -21,12 +21,16 @@ export function ResponsiveGlimm({ children }: { children: ReactNode }) {
   return (
     <GlimmProvider
       palette={"spectrum"}
-      easing="back"
-      sweepMs={isMobile ? 1100 : 1000}
+      easing="linear"
+      sweepMs={isMobile ? 550 : 500}
       outroMs={50}
       midpoint={0.5}
       bandTight={isMobile ? 12 : 25}
-      direction={isMobile ? "ttb" : "rtl"}
+      direction={isMobile ? "btt" : "rtl"}
+      peakAlpha={1}
+      rippleAmount={0.6}
+      waveSpeed={1.4}
+      brightness={0.85}
     >
       {children}
     </GlimmProvider>
